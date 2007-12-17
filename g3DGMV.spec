@@ -50,9 +50,15 @@ rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
 #menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): command="%{name}" icon="%{name}.png" needs="x11" title="g3DGMV" longtitle="3D Map Viewer" section="Applications/Sciences/Geosciences"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%name.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{name}
+Icon=%{name}
+Name=g3DGMV
+Comment=3D Map Viewer
+Categories=Education;Science;Geology;
 EOF
 
 #icons
@@ -78,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc README ChangeLog AUTHORS COPYING NEWS
 %{_bindir}/%name
-%{_menudir}/%name
+%{_datadir}/applications/mandriva-%name.desktop
 %{_datadir}/gnome/help/gnome-%name
 %{_datadir}/gnome/apps/Applications/*.desktop
 %{_datadir}/pixmaps/*.png
