@@ -17,6 +17,7 @@ Patch0:		g3DGMV-0.60-fixbuild.patch.bz2
 URL:		http://g3dgmv.sourceforge.net/
 License:	GPL
 Group:		Sciences/Geosciences
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	gettext gnome-libs-devel
 
 %description
