@@ -14,7 +14,7 @@ Source3: 	%{name}16.png
 # (fc) 0.60-2mdk fix build
 Patch0:		g3DGMV-0.60-fixbuild.patch.bz2
 
-URL:		http://g3dgmv.sourceforge.net/
+URL:		https://g3dgmv.sourceforge.net/
 License:	GPL
 Group:		Sciences/Geosciences
 BuildRoot:	%{_tmppath}/%{name}-buildroot
