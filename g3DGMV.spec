@@ -18,6 +18,11 @@ URL:		https://g3dgmv.sourceforge.net/
 License:	GPL
 Group:		Sciences/Geosciences
 BuildRoot:	%{_tmppath}/%{name}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gettext gnome-libs-devel
 
 %description
