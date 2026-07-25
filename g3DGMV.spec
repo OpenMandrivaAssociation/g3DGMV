@@ -1,6 +1,6 @@
 %define name	g3DGMV
 %define version	0.60
-%define release %mkrel 6
+%define release 7
 
 Name: 	 	%{name}
 Summary: 	3D digital map viewer for GNOME
